@@ -1,17 +1,12 @@
-[38;2;142;182;255m[1m
-  benm-dev[0m  ·  Benjamin Marshall  ·  Sydney
-[38;2;139;149;173m────────────────────────────────────────────[0m
-[38;2;110;243;197m●[0m session   fake Wayland-style desktop at
-          [38;2;142;182;255mhttps://benm-dev.github.io/[0m
+[38;2;142;182;255m[1mBenjamin Marshall[0m  [38;2;139;149;173mSydney[0m
+[38;2;60;70;90m────────────────────────────────────────────[0m
+[38;2;110;243;197m◉[0m  generative profile  [38;2;142;182;255mfield · light · tile[0m
+    seed [38;2;180;190;210m4621b55103927325f402[0m
 
-[38;2;232;237;248mfocus[0m
-  · remote workstation / Fold-class clients
-  · declarative hosts (Nix · Wayland)
-  · local-first product tools
-  · quiet agent / IDE glue
+[38;2;200;210;230msystems[0m   remote workstations · declarative hosts
+[38;2;200;210;230mclients[0m   Fold-class streaming & input
+[38;2;200;210;230mtools[0m     local-first · quiet agent glue
 
-[38;2;232;237;248mstack[0m   Rust · Swift · Nix · TypeScript · Wayland
-
-[38;2;139;149;173mMost work is private. This card is the public edge.[0m
-[38;2;139;149;173mprofile  https://github.com/benm-dev[0m
+[38;2;139;149;173mhttps://github.com/benm-dev[0m
+[38;2;139;149;173mhttps://benm-dev.github.io[0m
 
