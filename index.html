@@ -4,44 +4,60 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Benjamin Marshall</title>
-  <meta name="description" content="Benjamin Marshall — systems, remote Fold workstation, and tools." />
+  <meta name="description" content="Benjamin Marshall — Sydney. Systems, clients, tooling." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <div class="glow" aria-hidden="true"></div>
   <main>
     <header>
-      <p class="eyebrow">benm-dev</p>
+      <p class="eyebrow"><span class="mono">~/</span> benm-dev</p>
       <h1>Benjamin Marshall</h1>
-      <p class="lede">Systems and clients for a remote Fold workstation. Most of the work is private; this is the public surface.</p>
-      <p class="links">
+      <p class="lede">Sydney. I build remote workstations, declarative hosts, and tools that stay out of the way.</p>
+      <nav class="links">
         <a href="https://github.com/benm-dev">GitHub</a>
-      </p>
+        <span class="dot" aria-hidden="true"></span>
+        <a href="https://github.com/benm-dev/benm-dev">profile</a>
+      </nav>
     </header>
 
-    <section aria-labelledby="now">
-      <h2 id="now">Now</h2>
+    <section aria-labelledby="focus">
+      <h2 id="focus">Focus</h2>
       <ul class="projects">
         <li>
-          <h3>Foldlight</h3>
-          <p>Sunshine / GameStream client for Galaxy Fold — Moonlight Android fork with Fold-native input and editing work.</p>
+          <p class="tag mono">01</p>
+          <h3>Remote workstation</h3>
+          <p>Low-latency streaming and input for Fold-class devices. Native feel over the wire.</p>
         </li>
         <li>
-          <h3>Zerokelvin</h3>
-          <p>NixOS source of truth. Zero drift; rebuild from source. Hosts, Niri, Sunshine, and quirks in one tree.</p>
+          <p class="tag mono">02</p>
+          <h3>Declarative systems</h3>
+          <p>Nix hosts, Wayland desktops, identity that doesn’t drift. Rebuild from source.</p>
         </li>
         <li>
-          <h3>Niri</h3>
-          <p>Private fork with virtual outputs, touch, and IPC for remote Fold streaming.</p>
+          <p class="tag mono">03</p>
+          <h3>Product tools</h3>
+          <p>Venue ops and stocktake — local-first when the floor can’t wait on the cloud.</p>
         </li>
         <li>
-          <h3>Dip It</h3>
-          <p>Venue stocktake. Current canon is a local-only SwiftUI app with immutable SQLite revisions.</p>
+          <p class="tag mono">04</p>
+          <h3>Agent glue</h3>
+          <p>IDE and workflow wiring that cuts friction. Quiet automation, not dashboard theater.</p>
         </li>
       </ul>
     </section>
 
+    <section aria-labelledby="stack" class="stack-section">
+      <h2 id="stack">Stack</h2>
+      <p class="stack mono">Rust · Swift · Nix · TypeScript · Wayland · Python</p>
+    </section>
+
     <footer>
-      <p>Sydney · updated Sep 2026</p>
+      <p>Most of the work is private. This is the public edge.</p>
+      <p class="fine">Sydney · 2026</p>
     </footer>
   </main>
 </body>
