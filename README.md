@@ -1,3 +1,5 @@
-# Benjamin Marshall
+# benm-dev.github.io
 
-Personal site — rebuilt Sep 2026.
+Personal site for [Benjamin Marshall](https://github.com/benm-dev).
+
+Live: https://benm-dev.github.io/
