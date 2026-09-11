@@ -3,54 +3,54 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>benm-dev — session</title>
-  <meta name="description" content="Benjamin Marshall — interactive desktop session." />
+  <title>benm-dev — field</title>
+  <meta name="description" content="Living generative field — Benjamin Marshall" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div id="stage" class="stage">
-    <canvas id="bg" aria-hidden="true"></canvas>
-
-    <header class="bar top">
-      <div class="bar-left">
-        <span class="pill live"></span>
-        <span class="mono">wl-session · edge</span>
-      </div>
-      <div class="bar-center mono" id="clock">--:--:--</div>
-      <div class="bar-right mono">Sydney · input: pointer</div>
+  <canvas id="field" aria-hidden="true"></canvas>
+  <div class="ui">
+    <header>
+      <p class="eyebrow mono" id="seedline">seed —</p>
+      <h1>Benjamin Marshall</h1>
+      <p class="lede">Sydney. Remote workstations, declarative hosts, local-first tools. Most work stays private — this page is the public instrument.</p>
+      <p class="meta mono"><span id="clock">--:--:--</span> AEST · <span id="fps">—</span> fps · pointer moves the light</p>
     </header>
 
-    <div id="workspace" class="workspace" aria-label="Desktop workspace"></div>
+    <section class="panel">
+      <div class="panel-h mono">PUBLIC SIGNAL · 56D DENSITY</div>
+      <canvas id="signal" height="120"></canvas>
+      <div class="types mono" id="types"></div>
+    </section>
 
-    <footer class="bar bottom">
-      <span class="mono">drag windows · scroll to zoom · press <kbd>?</kbd></span>
-      <a class="mono ghost" href="https://github.com/benm-dev">github.com/benm-dev</a>
-      <span class="mono dim">curl -sL https://benm-dev.github.io/card</span>
+    <section class="grid">
+      <article>
+        <h2>Remote workstation</h2>
+        <p>Low-latency streaming and input for Fold-class devices. Native feel over the wire.</p>
+      </article>
+      <article>
+        <h2>Declarative systems</h2>
+        <p>Nix hosts, Wayland desktops, identity that rebuilds clean — zero drift.</p>
+      </article>
+      <article>
+        <h2>Product tools</h2>
+        <p>Local-first ops for floors that can’t wait on a spinner.</p>
+      </article>
+      <article>
+        <h2>Agent glue</h2>
+        <p>Quiet automation for IDEs and workflows. Less dashboard, more leverage.</p>
+      </article>
+    </section>
+
+    <footer class="mono">
+      <a href="https://github.com/benm-dev">github.com/benm-dev</a>
+      <span>·</span>
+      <span>curl -sL https://benm-dev.github.io/card</span>
     </footer>
-
-    <aside id="help" class="help hidden" hidden>
-      <h2 class="mono">binds</h2>
-      <ul class="mono">
-        <li><kbd>drag</kbd> move window</li>
-        <li><kbd>scroll</kbd> zoom workspace</li>
-        <li><kbd>1-4</kbd> focus window</li>
-        <li><kbd>f</kbd> flash layout</li>
-        <li><kbd>?</kbd> toggle this</li>
-        <li><kbd>esc</kbd> close help</li>
-      </ul>
-      <p class="dim">This is not a real compositor. It just acts like one.</p>
-    </aside>
   </div>
-
-  <noscript>
-    <main style="max-width:40rem;margin:4rem auto;padding:1rem;font-family:system-ui;color:#eee;background:#111">
-      <h1>Benjamin Marshall</h1>
-      <p>Enable JS for the session UI, or <code>curl -sL https://benm-dev.github.io/card</code>.</p>
-    </main>
-  </noscript>
-  <script src="session.js"></script>
+  <script src="field.js"></script>
 </body>
 </html>
