@@ -11,37 +11,57 @@
       id: "about",
       title: "about · Benjamin Marshall",
       x: 56, y: 48, w: 360,
-      html: `\n        <h1>Benjamin Marshall</h1>\n        <p>Sydney. I build remote workstations, declarative hosts, and tools that stay quiet until you need them.</p>\n        <p>Most of the work is private. This page is a fake compositor session — drag it around.</p>\n        <div class=\"chiprow\">\n          <span class=\"chip mono\">Rust</span>\n          <span class=\"chip mono\">Swift</span>\n          <span class=\"chip mono\">Nix</span>\n          <span class=\"chip mono\">Wayland</span>\n          <span class=\"chip mono\">TS</span>\n        </div>`
+      html: `
+        <h1>Benjamin Marshall</h1>
+        <p>Sydney. I build remote workstations, declarative hosts, and tools that stay quiet until you need them.</p>
+        <p>Most of the work is private. This page is a fake compositor session — drag it around.</p>
+        <div class="chiprow">
+          <span class="chip mono">Rust</span>
+          <span class="chip mono">Swift</span>
+          <span class="chip mono">Nix</span>
+          <span class="chip mono">Wayland</span>
+          <span class="chip mono">TS</span>
+        </div>`
     },
     {
       id: "focus",
       title: "focus · surfaces",
       x: 460, y: 64, w: 340,
-      html: `\n        <h3>Remote workstation</h3>\n        <p>Low-latency streaming + input for Fold-class devices. Native feel over the wire.</p>\n        <h3>Declarative systems</h3>\n        <p>Hosts that rebuild clean. Desktops that do not accumulate snowflake state.</p>\n        <h3>Product tools</h3>\n        <p>Local-first ops tools for floors that cannot wait on a spinner.</p>`
+      html: `
+        <h3>Remote workstation</h3>
+        <p>Low-latency streaming + input for Fold-class devices. Native feel over the wire.</p>
+        <h3>Declarative systems</h3>
+        <p>Hosts that rebuild clean. Desktops that do not accumulate snowflake state.</p>
+        <h3>Product tools</h3>
+        <p>Local-first ops tools for floors that cannot wait on a spinner.</p>`
     },
     {
       id: "boot",
       title: "journalctl · session",
       x: 120, y: 320, w: 420,
-      html: `<pre class=\"log mono\" id=\"bootlog\"></pre>`
+      html: `<pre class="log mono" id="bootlog"></pre>`
     },
     {
       id: "curl",
       title: "hint · terminal card",
       x: 580, y: 340, w: 320,
-      html: `\n        <h3>Prefer terminals?</h3>\n        <p>This site ships a truecolor ANSI card. No JS. No tracking. Just bytes.</p>\n        <pre class=\"log mono\">curl -sL https://benm-dev.github.io/card</pre>\n        <p>Or open the profile README — same energy, less chrome.</p>`
+      html: `
+        <h3>Prefer terminals?</h3>
+        <p>This site ships a truecolor ANSI card. No JS. No tracking. Just bytes.</p>
+        <pre class="log mono">curl -sL https://benm-dev.github.io/card</pre>
+        <p>Or open the profile README — same energy, less chrome.</p>`
     }
   ];
 
   const bootLines = [
-    { t: 0, s: '<span class=\"hi\">::</span> mounting workspace overlay' },
-    { t: 280, s: '<span class=\"ok\">ok</span>   pointer seat attached' },
-    { t: 520, s: '<span class=\"ok\">ok</span>   virtual output 2880×1600@120' },
-    { t: 760, s: '<span class=\"hi\">::</span> negotiating remote stream' },
-    { t: 1100, s: '<span class=\"ok\">ok</span>   input bridge warm' },
-    { t: 1400, s: '<span class=\"ok\">ok</span>   layout engine: tile-spiral' },
-    { t: 1700, s: '<span class=\"hi\">::</span> identity: benm-dev@sydney' },
-    { t: 2000, s: '<span class=\"ok\">ok</span>   session ready — drag a window' }
+    { t: 0, s: '<span class="hi">::</span> mounting workspace overlay' },
+    { t: 280, s: '<span class="ok">ok</span>   pointer seat attached' },
+    { t: 520, s: '<span class="ok">ok</span>   virtual output 2880×1600@120' },
+    { t: 760, s: '<span class="hi">::</span> negotiating remote stream' },
+    { t: 1100, s: '<span class="ok">ok</span>   input bridge warm' },
+    { t: 1400, s: '<span class="ok">ok</span>   layout engine: tile-spiral' },
+    { t: 1700, s: '<span class="hi">::</span> identity: benm-dev@sydney' },
+    { t: 2000, s: '<span class="ok">ok</span>   session ready — drag a window' }
   ];
 
   let z = 10;
@@ -81,7 +101,12 @@
     el.style.left = spec.x + "px";
     el.style.top = spec.y + "px";
     el.style.width = spec.w + "px";
-    el.innerHTML = `\n      <div class=\"titlebar\" data-drag>\n        <div class=\"dots\" aria-hidden=\"true\"><span></span><span></span><span></span></div>\n        <div class=\"title mono\">${spec.title}</div>\n      </div>\n      <div class=\"body\">${spec.html}</div>`;
+    el.innerHTML = `
+      <div class="titlebar" data-drag>
+        <div class="dots" aria-hidden="true"><span></span><span></span><span></span></div>
+        <div class="title mono">${spec.title}</div>
+      </div>
+      <div class="body">${spec.html}</div>`;
     workspace.appendChild(el);
     nodes.set(spec.id, el);
 
@@ -118,7 +143,7 @@
     log.textContent = "";
     bootLines.forEach(line => {
       setTimeout(() => {
-        log.innerHTML += line.s + "\\n";
+        log.innerHTML += line.s + "\n";
       }, line.t);
     });
   }
